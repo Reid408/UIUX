@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+
+    <link rel="icon" href="favicon.ico" />
+    <title>Blue Monkey</title>
+  </head>
+  <body>
+    <header>
+      <div class="headerLeft">
+        <a href="#">
+          <img class="logo" src="images/logo-teaching.png" alt="Logo" />
+          <div class="logoText">線上開課工具！</div>
+        </a>
+      </div>
+      <nav class="headerMid">
+        <input id="headerCheck" type="checkbox" />
+        <label for="headerCheck"
+          ><img
+            src="http://127.0.0.1:5500/Course/uiuxweb/bluemonkey.tw/images/icon_bars.svg"
+            alt=""
+        /></label>
+        <ul>
+          <li><a href="#">線上開課工具</a></li>
+          <li><a href="#">功能特色</a></li>
+          <li><a href="#">方案費用</a></li>
+          <li><a href="#">客戶案例</a></li>
+          <li><a href="#">關於我們</a></li>
+          <li><a href="#">藍猴首頁</a></li>
+        </ul>
+      </nav>
+      <div class="headerRight">
+        <a href="#">FREE! 免費開通試用</a>
+      </div>
+    </header>
+    <main>
+      <section class="sectionBanner">
+        <div class="container">
+          <img class="bannerImg" src="images/3bm-fb-share.jpg" alt="" />
+          <a class="bmBtn arrow" href="">查看方案</a>
+        </div>
+      </section>
+      <section class="sectionNumber"></section>
+      <section class="sectionService"></section>
+      <section class="sectionForm">
+        <div class="container">
+          <div class="bm_form">
+            <h2>你的線上教學事業馬上啟動！</h2>
+            <p>
+              歡迎加入
+              LINE，即時展開對話，或是填寫下方表單，我們將致電與您討論：）
+            </p>
+            <form action="">
+              <div class="form_left">
+                <div class="input_wrap">
+                  <div class="input_group">
+                    <input
+                      id="name"
+                      type="text"
+                      class="form-control"
+                      placeholder="*名字"
+                      name="name"
+                      required=""
+                      maxlength="10"
+                    />
+                  </div>
+                  <div class="input_group">
+                    <input
+                      id="email"
+                      type="email"
+                      class="form-control"
+                      placeholder="*Email"
+                      name="email"
+                      required=""
+                      maxlength="15"
+                    />
+                  </div>
+                  <div class="input_group">
+                    <input
+                      id="phone"
+                      type="tel"
+                      class="form-control"
+                      placeholder="*聯絡電話"
+                      name="phone"
+                      required=""
+                      maxlength="10"
+                    />
+                  </div>
+                </div>
+                <div class="con_chose">
+                  <h4>我想了解：</h4>
+                  <input
+                    id="chose1"
+                    type="radio"
+                    name="radiott"
+                    value=""
+                    checked=""
+                  />
+                  <label for="chose1">
+                    <span><span class="chose_text">月租</span> 方案</span>
+                  </label>
+
+                  <input
+                    id="chose2"
+                    type="radio"
+                    name="radiott"
+                    value="企業方案"
+                  />
+                  <label for="chose2">
+                    <span><span class="chose_text">企業</span> 方案</span>
+                  </label>
+
+                  <input id="chose3" type="radio" name="radiott" value="其他" />
+                  <label for="chose3">
+                    <span>其他</span>
+                  </label>
+                </div>
+                <div>
+                  <textarea
+                    id="t_textarea"
+                    class="t_textarea"
+                    placeholder="您現況遇到的開課問題？我們會全力提供協助及建議！"
+                    name="t_textarea"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="form_right"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>

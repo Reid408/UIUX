@@ -1,0 +1,292 @@
+/*初始化*/
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* 公用結構*/
+.container {
+  margin: 0 auto;
+  max-width: 950px;
+  width: 100%;
+}
+
+::selection {
+  color: black;
+  background-color: #f15b3a;
+}
+
+ul {
+  list-style-type: none; /*移除項目標籤*/
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*------Header-----------*/
+header {
+  display: flex;
+  height: 75px;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+}
+
+.logoText {
+  border: 1px solid #ccc;
+  color: #595959;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 5px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.headerLeft a:hover .logoText {
+  -webkit-animation: hover-shine 1.5s cubic-bezier(0, 0.58, 1, 0.44) infinite;
+  animation: hover-shine 1.5s cubic-bezier(0, 0.58, 1, 0.44) infinite;
+}
+@keyframes hover-shine {
+  0% {
+    background: #52b14c;
+    color: white;
+  }
+  25% {
+    background: #ffdd3d;
+    color: white;
+  }
+  50% {
+    background: #f8b158;
+    color: white;
+  }
+  75% {
+    background: #f15b3a;
+    color: white;
+  }
+  100% {
+    background: #28b2ee;
+    color: white;
+  }
+}
+
+.headerLeft a {
+  display: flex;
+  margin: 0 55px;
+}
+
+.headerMid > ul {
+  display: flex;
+}
+
+header .headerRight {
+  margin: auto 5% auto auto;
+}
+
+.headerRight > a {
+  border: 1px solid orange;
+  border-radius: 100px;
+  padding: 15px 20px;
+  color: black;
+  font-weight: bold;
+}
+
+.headerRight > a:hover {
+  background: linear-gradient(135deg, #f6b365, #fda08f 70.71%);
+}
+
+/*------漢堡選單-----------*/
+#headerCheck {
+  display: none;
+}
+/*兄弟選擇器*/
+#headerCheck + label {
+  display: none;
+}
+
+/* ---- Main Section ----*/
+
+.sectionBanner {
+  background-color: #1b96e1;
+  text-align: center;
+  padding: 30px 0px;
+}
+
+.bannerImg {
+  width: 100%;
+}
+
+.bmBtn {
+  background-color: #ffdd3d;
+  color: black;
+  padding: 0.5rem 6rem;
+  border: 4px solid white;
+  border-radius: 100px;
+  font-weight: bold;
+  letter-spacing: 0.8rem;
+  font-size: 30px;
+  display: inline-block;
+  position: relative;
+}
+
+.bmBtn.arrow::before {
+  content: "→";
+  position: absolute;
+  right: 10px;
+}
+
+.bmBtn.arrow:after {
+  content: "*";
+  position: absolute;
+  left: 10px;
+}
+
+.sectionForm {
+  background-color: #f6f8fd;
+  padding: 100px 20px;
+}
+
+/*表單*/
+/*寫法二*/
+.bm_form .input_group {
+  background-color: rgb(237, 237, 237);
+  position: relative;
+  outline: none;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.input_group::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  top: 10px;
+  margin-bottom: 10px;
+  /* background-color: red; */
+  display: inline-block;
+  background: url(https://cdn-icons-png.flaticon.com/512/126/126516.png);
+  background-size: cover;
+  position: absolute;
+  left: 5px;
+}
+
+.input_group input {
+  padding: 10px 24px;
+  padding-left: 35px;
+  border: 1px solid black;
+  outline: none;
+  background-color: transparent;
+  width: 100%;
+}
+
+.input_group input:focus {
+  outline: none;
+  background-color: white;
+  border-color: #0693e3;
+  box-shadow: 0 0 0 1.5px #0693e3;
+}
+
+/*寫法一*/
+/* .bm_form input.form-control {
+  border: 1px solid black;
+  background-color: rgb(237, 237, 237);
+  padding: 10px 24px;
+  outline: none;
+  font-size: 22px;
+}
+
+/*表單
+.bm_form input.form-control:focus {
+  outline: none;
+  background-color: white;
+  border-color: #0693e3;
+  box-shadow: 0 0 0 1.5px #0693e3;
+} */
+
+.con_chose input {
+  display: none;
+}
+
+.con_chose label {
+  text-align: center;
+  display: inline-block;
+  border-radius: 30px;
+  padding: 10px 11px;
+}
+
+.con_chose label::before {
+  content: "";
+  width: 23px;
+  height: 23px;
+  display: inline-block;
+  border: 2px solid #777;
+  border-radius: 50%;
+  vertical-align: middle;
+  align-items: center;
+  background-color: white;
+  transition: 0.25s ease;
+}
+
+.chose_text {
+  color: #0693e3;
+}
+
+.con_chose label span {
+  vertical-align: middle;
+}
+
+.con_chose input:checked + label,
+.con_chose input:hover + label {
+  background: #dfdfdf;
+  cursor: pointer;
+}
+
+.con_chose input:checked + label::before {
+  border: 6px solid #0693e3;
+}
+
+/*手機板*/
+@media (max-width: 1000px) {
+  /*兄弟選擇器*/
+  #headerCheck + label {
+    display: block;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  .headerMid > ul {
+    position: absolute;
+    left: 0;
+    top: 75px;
+    background-color: white;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+  }
+
+  .headerMid > ul > li {
+    padding: 20px 0;
+  }
+
+  .headerRight {
+    display: none;
+  }
+
+  #headerCheck:checked + label + ul {
+    display: block;
+  }
+}

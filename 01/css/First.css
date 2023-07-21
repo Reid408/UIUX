@@ -1,0 +1,17 @@
+.a2 {
+  color: aqua;
+}
+
+#ah3 {
+  background-repeat: no-repeat;
+  background-color: aqua;
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+  background-image: linear-gradient(
+      90deg,
+      rgb(254, 191, 72) 0%,
+      rgba(212, 79, 112, 0) 100%
+    ),
+    url(../img/a1.jpg);
+}
